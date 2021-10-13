@@ -1,0 +1,288 @@
+/**
+ * @Project NUKEVIET 4.x
+ * @Author Thuong Mai So <hoangnt@nguyenvan.vn>
+ * @Copyright (C) 2018 Thuong Mai So. All rights reserved
+ * @License: Not free read more http://nukeviet.systems
+ * @Createdate Fri, 10 Aug 2018 07:54:45 GMT
+ */
+
+
+
+/* Colors and Backgrouds
+=================================================================== */
+.blue {
+    color: #428BCA !important;
+}
+.lightBlue {
+    color: #5BC0DE !important;
+}
+.green {
+    color: #bdea74 !important;
+}
+.mGreen {
+    color: #16a085 !important;
+}
+.darkGreen {
+    color: #78cd51 !important;
+}
+.pink {
+    color: #e84c8a !important;
+}
+.orange {
+    color: #fa603d !important;
+}
+.lightOrange {
+    color: #fabb3d !important;
+}
+.purple {
+    color: #8e44ad !important;
+}
+.red {
+    color: #ff5454 !important;
+}
+.yellow {
+    color: #eae874 !important;
+}
+.white {
+    color: white !important;
+}
+.grey {
+    color: #b2b8bd !important;
+}
+.black {
+    color: #000000 !important;
+}
+.bblue {
+    background: #428BCA !important;
+}
+.blightBlue {
+    background: #5BC0DE !important;
+}
+.bgreen {
+    background: #bdea74 !important;
+}
+.bmGreen {
+    background: #16a085 !important;
+}
+.bdarkGreen {
+    background: #78cd51 !important;
+}
+.bpink {
+    background: #e84c8a !important;
+}
+.borange {
+    background: #fa603d !important;
+}
+.blightOrange {
+    background: #fabb3d !important;
+}
+.bpurple {
+    background: #8e44ad !important;
+}
+.bred {
+    background: #ff5454 !important;
+}
+.byellow {
+    background: #eae874 !important;
+}
+.bwhite {
+    background: white !important;
+}
+.bgrey {
+    background: #b2b8bd !important;
+}
+.blightGrey {
+    background: #e9ebec !important;
+}
+.bblack {
+    background: #000000 !important;
+}
+
+.padding1010 {
+    padding: 10px !important;
+}
+.quick-button {
+    margin-bottom: -1px;
+    padding: 30px 0px 10px 0px;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    opacity: 0.9;
+}
+
+#date_from, #date_to {
+	display: inline-block;
+}
+
+.table > thead:first-child > tr:first-child > th, .table > thead:first-child > tr:first-child > td, .table-striped thead tr.primary:nth-child(odd) th {
+    background-color: #428BCA;
+    color: white;
+    border-color: #357EBD;
+    border-top: 1px solid #357EBD;
+    text-align: center;
+}
+
+.noMarginLeft {
+    margin-left: 0px !important;
+}
+.noPadding {
+    padding: 0px !important;
+}
+.box {
+    border: 1px solid #dbdee0;
+    margin-bottom: 15px;
+}
+.box .box-content .panel ol, .box .box-content .panel ul {
+    padding-left: 20px;
+}
+.box.noOverflow {
+    overflow: hidden;
+}
+.box .box-header {
+    background: white;
+    color: #34383c;
+    font-size: 16px;
+    background: #f7f7f8;
+    border-bottom: 1px solid #dbdee0;
+    height: 40px;
+}
+.box .box-header h2 {
+    float: left;
+    padding: 10px 0px;
+    margin: 0px 0px 0px 20px;
+}
+.box .box-header h2 i {
+    border-right: 1px solid #dbdee0;
+    padding: 12px 0px;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    text-align: center;
+    margin: -10px 20px -10px -20px;
+    font-size: 16px;
+}
+.box .box-header h2 i.nb {
+    border-right: 0;
+    margin-right: 0;
+}
+.box .box-header .box-icon {
+    float: right;
+}
+.box .box-header .box-icon a:hover {
+    text-decoration: none;
+}
+.box .box-header .box-icon i.icon {
+    display: inline-block;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    padding: 12px 0px;
+    border-left: 1px solid #ced1d4;
+    text-decoration: none;
+}
+.box-icon .choose-date {
+    border-color: #ced1d4;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #DBDEE0;
+    border-image: none;
+    border-style: none none none solid;
+    border-width: 0 0 0 1px;
+    height: 40px;
+    padding: 3px 10px;
+    width: 350px;
+}
+.box-icon .choose-date .input-group-addon, .box-icon .choose-date input {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    box-shadow: none;
+}
+.box-icon .choose-date .input-group-addon {
+    font-size: 12px;
+    padding: 0;
+}
+.box-icon .choose-date .input-group-addon i { border: 0; }
+.box-icon .choose-date input {
+    font-weight: 300;
+}
+.box-icon .choose-date input:focus {
+    box-shadow: none;
+    outline: 0 none;
+}
+.box .btn-tasks {
+    list-style: none;
+    margin-bottom: 0;
+}
+.box .btn-tasks li {
+    float: right;
+}
+.box .btn-tasks li li {
+    float: none;
+}
+.box .box-content {
+    padding: 20px;
+    background: white;
+}
+.box .box-content p.introtext{
+    background: #F9F9F9;
+    margin: -20px -20px 20px -20px;
+    padding: 10px;
+    border-bottom: 1px solid #DBDEE0;
+}
+.box .box-content.no-padding {
+    background: white;
+    padding: 1px 0;
+}
+.small-box {
+    margin-bottom: 20px;
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    1px 1px 2px 0px rgba(50, 50, 50, 0.75);
+    /* box-shadow:         1px 1px 2px 0px rgba(50, 50, 50, 0.75); */
+}
+.small-box h3, .small-box a, .small-box p {
+    text-align: center;
+    text-decoration: none;
+    color: #FFF;
+}
+.small-box h3 {
+    font-size: 30px;
+    line-height: 30px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+}
+.small-box h4 {
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: normal;
+}
+.small-box .icon {
+    position: absolute;
+    top:-10px;
+    right: -5px;
+    font-size: 155px;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+
+ 
+
+
+#secondcatid span.select2.select2-container.select2-container--default{
+	  width: 100% !important;
+}
+
+
+.products input {
+    max-width: 100px;
+}
+
+li.select2-results__option {
+    height: 30px;
+}
+
+/* span.select2-dropdown.select2-dropdown--below {
+    width: 270px !important;
+} */
