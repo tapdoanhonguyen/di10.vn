@@ -1,0 +1,18 @@
+[Mon, 11 Oct 2021 12:34:38 +0700] [di10.vn] [14.187.201.66] [Notice(8): Undefined index: symbol] [FILE: /modules/shops/site.functions.php] [LINE: 189] [TRACE:]
+#1  LINE: 388   FILE: /index.php
+#2  LINE: 21    FILE: /modules/home/funcs/main.php
+#3  LINE: 378   FILE: /themes/twtg51/theme.php
+#4  LINE: 178   FILE: /includes/core/user_functions.php
+#5  LINE: 318   FILE: /modules/shops/blocks/global.block_loai_trangchu.php
+#6  LINE: 265   FILE: /modules/shops/blocks/global.block_loai_trangchu.php
+#7  LINE: 94    FILE: /modules/shops/blocks/global.block_loai_trangchu.php
+
+[Mon, 11 Oct 2021 13:32:13 +0700] [di10.vn] [27.75.90.17] [Notice(8): Undefined index: symbol] [FILE: /modules/shops/site.functions.php] [LINE: 189] [TRACE:]
+#1  LINE: 388   FILE: /index.php
+#2  LINE: 21    FILE: /modules/home/funcs/main.php
+#3  LINE: 378   FILE: /themes/twtg51/theme.php
+#4  LINE: 178   FILE: /includes/core/user_functions.php
+#5  LINE: 318   FILE: /modules/shops/blocks/global.block_loai_trangchu.php
+#6  LINE: 265   FILE: /modules/shops/blocks/global.block_loai_trangchu.php
+#7  LINE: 94    FILE: /modules/shops/blocks/global.block_loai_trangchu.php
+
