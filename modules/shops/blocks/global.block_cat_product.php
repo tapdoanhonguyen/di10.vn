@@ -24,18 +24,21 @@ if (! nv_function_exists('nv_cat_product3')) {
      */
     function nv_block_config_cat_product_blocks3($module, $data_block, $lang_block)
     {
-        global $nv_Cache, $db_config, $site_mods;
+        global $nv_Cache, $db_config, $site_mods, $db;
 
         $html = "<tr>";
         $html .= "	<td>Loại sản phẩm</td>";
         $html .= "	<td>";
         $sql = "SELECT catid, " . NV_LANG_DATA . "_title," . NV_LANG_DATA . "_alias FROM " . $db_config['prefix'] . "_" . $site_mods[$module]['module_data'] . "_catalogs ORDER BY weight ASC";
-		
-        $list = $nv_Cache->db($sql, 'catid', $module);
+		$listall = $db->query($sql)->fetchAll();
+			$list = array();
+			foreach ($listall as $row){
+				$list[] = $row;
+			}
 		$html .='<select name="config_catid">';
         foreach ($list as $l) {
            
-			 $html .= '<option value="' . $l['catid'] . '" ' . ((in_array($l['catid'], $data_block['catid'])) ? ' selected="selected"' : '') . '>' . $l[NV_LANG_DATA . '_title'] . '</option>';
+			 $html .= '<option value="' . $l['catid'] . '" ' . ((($l['catid'] == $data_block['catid'])) ? ' selected="selected"' : '') . '>' . $l[NV_LANG_DATA . '_title'] . '</option>';
 			
         }
 		$html .='</select>';
@@ -164,7 +167,7 @@ if (! nv_function_exists('nv_cat_product3')) {
             $pro_config = $module_config[$module];
 
             // Lay ty gia ngoai te
-            $sql = 'SELECT code, currency, exchange, round, number_format FROM ' . $db_config['prefix'] . '_' .$mod_data . '_money_' . NV_LANG_DATA;
+            $sql = 'SELECT code, currency, symbol, exchange, round, number_format FROM ' . $db_config['prefix'] . '_' .$mod_data . '_money_' . NV_LANG_DATA;
             $cache_file = NV_LANG_DATA . '_' . md5($sql) . '_' . NV_CACHE_PREFIX . '.cache';
             if (($cache = $nv_Cache->getItem($module, $cache_file)) != false) {
                 $money_config = unserialize($cache);
@@ -177,6 +180,7 @@ if (! nv_function_exists('nv_cat_product3')) {
                         'currency' => $row['currency'],
                         'exchange' => $row['exchange'],
                         'round' => $row['round'],
+                        'symbol' => $row['symbol'],
                         'number_format' => $row['number_format'],
                         'decimals' => $row['round'] > 1 ? $row['round'] : strlen($row['round']) - 2,
                         'is_config' => ($row['code'] == $pro_config['money_unit']) ? 1 : 0
@@ -319,11 +323,24 @@ if (! nv_function_exists('nv_cat_product3')) {
 		}
 		return $data;
 	}
-	global $db_config;
-	$sql = 'SELECT groupid, parentid, lev, ' . NV_LANG_DATA . '_title AS title, ' . NV_LANG_DATA . '_alias AS alias, viewgroup, numsubgroup, subgroupid, ' . NV_LANG_DATA . '_description AS description, inhome, indetail, in_order, ' . NV_LANG_DATA . '_keywords AS keywords, numpro, image, is_require FROM ' . $db_config['prefix'] . '_' . $block_config['module'] . '_group ORDER BY sort ASC';
-	$global_array_group = $nv_Cache->db($sql, 'groupid', $block_config['module']);
+
 }
 
 if (defined('NV_SYSTEM')) {
-    $content = nv_cat_product3($block_config);
+	global $db_config,$db,$module_name,$global_array_group;
+		$module = $block_config['module'];
+	
+		if ($module == $module_name) {
+			$sql = 'SELECT groupid, parentid, lev, ' . NV_LANG_DATA . '_title AS title, ' . NV_LANG_DATA . '_alias AS alias, viewgroup, numsubgroup, subgroupid, ' . NV_LANG_DATA . '_description AS description, inhome, indetail, in_order, ' . NV_LANG_DATA . '_keywords AS keywords, numpro, image, is_require FROM ' . $db_config['prefix'] . '_' . $site_mods[$module]['module_data'] . '_group ORDER BY sort ASC';
+			$list = $db->query($sql)->fetchAll();
+			$global_array_group = array();
+			foreach ($list as $row){
+				$global_array_group[$row['groupid']] = $row;
+			}
+		}else{
+			
+		}
+		$content = nv_cat_product3($block_config);
+	
+    
 }
