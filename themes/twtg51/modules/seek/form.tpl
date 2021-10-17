@@ -1,51 +1,71 @@
 <!-- BEGIN: main -->
-<div class="page panel panel-default">
-    <div class="panel-body">
-        <h3 class="text-center margin-bottom-lg">{LANG.info_title}</h3>
-        <div id="search-form" class="text-center">
-            <form action="{DATA.action}" name="form_search" method="get" id="form_search" role="form">
-                <input type="hidden" name="{NV_LANG_VARIABLE}" value="{NV_LANG_DATA}" />
-                <input type="hidden" name="{NV_NAME_VARIABLE}" value="{MODULE_NAME}" />
-                <div class="m-bottom">
-                    <div class="form-group">
-                        <label class="sr-only" for="search_query">{LANG.key_title}</label>
-                        <input class="form-control" id="search_query" name="q" value="{DATA.key}" maxlength="{NV_MAX_SEARCH_LENGTH}" placeholder="{LANG.key_title}" />
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="search_query_mod">{LANG.type_search}</label>
-                        <select name="m" id="search_query_mod" class="form-control">
-                            <option value="all">{LANG.search_on_site}</option>
-                            <!-- BEGIN: select_option -->
-                            <option data-adv="{MOD.adv_search}" value="{MOD.value}"{MOD.selected}>{MOD.custom_title}</option>
-                            <!-- END: select_option -->
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" id="search_submit" value="{LANG.search_title}" class="btn btn-primary" />
-                        <a href="#" class="advSearch">{LANG.search_title_adv}</a>
-                    </div>
-                </div>
-                <div class="radio">
-                    <label class="radio-inline"> <input name="l" id="search_logic_and" type="radio" {DATA.andChecked} value="1" /> {LANG.logic_and}</label>
-                    <label class="radio-inline"> <input name="l" id="search_logic_or" type="radio" {DATA.orChecked} value="0" /> {LANG.logic_or}</label>
-                </div>
-                <input type="hidden" name="page" value="{PAGE}" />
-            </form>
-        </div>
-        <!-- BEGIN: search_engine_unique_ID -->
-        <script async src="//cse.google.com/cse.js?cx={SEARCH_ENGINE_UNIQUE_ID}"></script>
-        <div class="text-center margin-bottom-lg search_adv">
-            <a href="javascript:void(0);" class="IntSearch"><i class="fa fa-eye" aria-hidden="true"></i> {LANG.search_adv_internet}</a>
-        </div>
-        <div id="gcse" class="hidden">
-            <div class="gcse-search"></div>
-        </div>
-        <!-- END: search_engine_unique_ID -->
-        <div id="search_result">
-            <hr />
-            {SEARCH_RESULT}
-        </div>
-    </div>
+
+<div class="bocuc  bocuc_41 ">
+	<div class="loprong">
+		<div class="padding ">
+			<div class="bocuc  mauchitietbaiviet_1 bocuc_9  ">
+				<div class="loprong">
+					<h1 class="header">
+						<span class="header_text">{MODULE_NAME}</span>
+					</h1>
+					<div class="padding ">
+						<div class="chucnang_chitiet noidungchitiet">			
+														
+							<div class="page panel panel-default">
+								<div class="panel-body">
+									<h3 class="text-center margin-bottom-lg">{LANG.info_title}</h3>
+									<div id="search-form" class="text-center">
+										<form action="{DATA.action}" name="form_search" method="get" id="form_search" role="form">
+											<input type="hidden" name="{NV_LANG_VARIABLE}" value="{NV_LANG_DATA}" />
+											<input type="hidden" name="{NV_NAME_VARIABLE}" value="{MODULE_NAME}" />
+											<div class="m-bottom">
+												<div class="form-group">
+													<label class="sr-only" for="search_query">{LANG.key_title}</label>
+													<input class="form-control" id="search_query" name="q" value="{DATA.key}" maxlength="{NV_MAX_SEARCH_LENGTH}" placeholder="{LANG.key_title}" />
+												</div>
+												<div class="form-group">
+													<label class="sr-only" for="search_query_mod">{LANG.type_search}</label>
+													<select name="m" id="search_query_mod" class="form-control">
+														<option value="all">{LANG.search_on_site}</option>
+														<!-- BEGIN: select_option -->
+														<option data-adv="{MOD.adv_search}" value="{MOD.value}"{MOD.selected}>{MOD.custom_title}</option>
+														<!-- END: select_option -->
+													</select>
+												</div>
+												<div class="form-group">
+													<input type="submit" id="search_submit" value="{LANG.search_title}" class="btn btn-primary" />
+													<a href="#" class="advSearch">{LANG.search_title_adv}</a>
+												</div>
+											</div>
+											<div class="radio">
+												<label class="radio-inline"> <input name="l" id="search_logic_and" type="radio" {DATA.andChecked} value="1" /> {LANG.logic_and}</label>
+												<label class="radio-inline"> <input name="l" id="search_logic_or" type="radio" {DATA.orChecked} value="0" /> {LANG.logic_or}</label>
+											</div>
+											<input type="hidden" name="page" value="{PAGE}" />
+										</form>
+									</div>
+									<!-- BEGIN: search_engine_unique_ID -->
+									<script async src="//cse.google.com/cse.js?cx={SEARCH_ENGINE_UNIQUE_ID}"></script>
+									<div class="text-center margin-bottom-lg search_adv">
+										<a href="javascript:void(0);" class="IntSearch"><i class="fa fa-eye" aria-hidden="true"></i> {LANG.search_adv_internet}</a>
+									</div>
+									<div id="gcse" class="hidden">
+										<div class="gcse-search"></div>
+									</div>
+									<!-- END: search_engine_unique_ID -->
+									<div id="search_result">
+										<hr />
+										{SEARCH_RESULT}
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <script type="text/javascript">
 function show_advSearch() {

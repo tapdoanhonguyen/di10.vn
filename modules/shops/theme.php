@@ -70,9 +70,8 @@ function draw_option_select_number($select = -1, $begin = 0, $end = 100, $step =
 function nv_template_view_home($array_data, $compare_id, $pages = '', $sort = 0, $viewtype = 'viewgrid')
 {
     global $module_info, $lang_module, $module_name, $module_file, $pro_config, $array_wishlist_id, $global_array_shops_cat, $global_array_group, $my_head;
-
     $xtpl = new XTemplate('main.tpl', NV_ROOTDIR . '/themes/' . $module_info['template'] . '/modules/' . $module_file);
-    $xtpl->assign('MODULE_NAME', $module_name);
+    $xtpl->assign('MODULE_NAME', $module_info['custom_title']);
     $xtpl->assign('LANG', $lang_module);
     $xtpl->assign('TEMPLATE', $module_info['template']);
 
@@ -219,6 +218,7 @@ function nv_template_detail($data_content, $data_unit, $data_others, $array_othe
     $xtpl = new XTemplate('detail.tpl', NV_ROOTDIR . '/themes/' . $module_info['template'] . '/modules/' . $module_file);
     $xtpl->assign('GLANG', $lang_module);
     $xtpl->assign('LANG', $lang_module);
+    $xtpl->assign('MODULE_NAME', $lang_module['product_info']);
     $xtpl->assign('MODULE', $module_name);
     $xtpl->assign('MODULE_FILE', $module_file);
     $xtpl->assign('TEMPLATE', $module_info['template']);
@@ -416,6 +416,7 @@ function nv_template_detail($data_content, $data_unit, $data_others, $array_othe
             if (!empty($data_content['homeimgfile'])) {
                 $xtpl->parse('main.imagemodal');
             }
+			$xtpl->parse('main.detail_header');
         } else {
             $xtpl->parse('main.popup');
             $xtpl->parse('main.popupid');
@@ -628,6 +629,7 @@ function cart_product($data_content, $coupons_code, $order_info, $array_error_nu
 
     $xtpl = new XTemplate('cart.tpl', NV_ROOTDIR . '/themes/' . $module_info['template'] . '/modules/' . $module_file);
     $xtpl->assign('LANG', $lang_module);
+    $xtpl->assign('MODULE_NAME', $lang_module['cart_title']);
     $xtpl->assign('TEMPLATE', $module_info['template']);
     $xtpl->assign('NV_BASE_SITEURL', NV_BASE_SITEURL);
     $xtpl->assign('C_CODE', $coupons_code);
@@ -779,6 +781,7 @@ function uers_order($data_content, $data_order, $total_coupons, $order_info)
     $xtpl->assign('TEMPLATE', $module_info['template']);
     $xtpl->assign('NV_BASE_SITEURL', NV_BASE_SITEURL);
     $xtpl->assign('MODULE_FILE', $module_file);
+    $xtpl->assign('MODULE_NAME', $lang_module['cart_order']);
     $xtpl->assign('NV_LANG_DATA', NV_LANG_DATA);
 
     $array_group_main = array();

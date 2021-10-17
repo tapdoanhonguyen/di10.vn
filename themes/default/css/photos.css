@@ -1,0 +1,62 @@
+/*Fix Bootstrap*/
+.panel-body img {
+    margin:auto;
+}
+.album-name h3{
+	line-height:2.5
+}
+.view_detail{
+	height: auto;
+	overflow: auto
+}
+.pd5{
+	padding: 5px
+}
+.pd10{
+	padding: 10px
+}
+.pd10_0{
+	padding: 10px 0px
+}
+.mg0_0_10{
+	margin: 0px 0px 10px
+}
+.mg0_10_10{
+	margin: 0px 10px 10px
+}
+.txt16{
+	font-size: 16px
+}
+.txt20{
+	font-size: 20px
+}
+.txt_bold{
+	font-weight:bold
+}
+.album-name h3 {
+    line-height: 1.5;
+    height: 40px;
+}
+
+.arrow_left{
+	position: absolute;
+	z-index: 999;
+	top: 50%;
+	left: 2%
+}
+.arrow_right{
+	position: absolute;
+	z-index: 999;
+	top: 50%;
+	right: 2%
+}
+
+.author_avatar {
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	}
+.spacer::before {
+    content: "\f10c";
+    margin: 0px 5px;
+}

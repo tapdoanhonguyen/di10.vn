@@ -2,10 +2,58 @@
 <!-- BEGIN: warning -->
 <div class="alert alert-danger">{LANG.warning}</div>
 <!-- END: warning -->
+<div class="bocuc  bocuc_41 ">
+	<div class="loprong">
+		<div class="padding ">
+			<div class="bocuc  mauchitietbaiviet_1 bocuc_9  ">
+				<div class="loprong">
+					<h1 class="header">
+						<span class="header_text">{CONTENT.title}</span>
+					</h1>
+					<div class="padding ">
+						<div class="chucnang_chitiet noidungchitiet">
+							<!-- BEGIN: imageleft -->
+							<figure class="article left pointer" onclick="modalShowByObj('#imgpreview');">
+								<div style="width:{CONTENT.thumb.width}px;">
+									<img alt="{CONTENT.title}" src="{CONTENT.thumb.src}" class="img-thumbnail" />
+									<!-- BEGIN: alt --><figcaption>{CONTENT.imagealt}</figcaption><!-- END: alt -->
+								</div>
+							</figure>
+							<div id="imgpreview" style="display:none">
+								<p class="text-center"><img alt="{CONTENT.title}" src="{CONTENT.img.src}" srcset="{CONTENT.img.srcset}" class="img-thumbnail"/></p>
+							</div>
+							<!-- END: imageleft -->
+
+							<!-- BEGIN: description -->
+							<div class="hometext margin-bottom-lg" itemprop="description">{CONTENT.description}</div>
+							<!-- END: description -->
+
+							<!-- BEGIN: imagecenter -->
+							<figure class="article center pointer" onclick="modalShowByObj(this);">
+								<p class="text-center"><img alt="{CONTENT.title}" src="{CONTENT.img.src}" srcset="{CONTENT.img.srcset}" width="{CONTENT.img.width}" class="img-thumbnail" /></p>
+								<!-- BEGIN: alt --><figcaption>{CONTENT.imagealt}</figcaption><!-- END: alt -->
+							</figure>
+							<!-- END: imagecenter -->
+
+							<div class="clear"></div>
+
+							<div id="page-bodyhtml" class="bodytext margin-bottom-lg">
+								{CONTENT.bodytext}
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 <div class="page panel panel-default" itemtype="http://schema.org/Article" itemscope>
     <div class="panel-body">
-        <h1 class="title margin-bottom-lg" itemprop="headline">{CONTENT.title}</h1>
+		
+        <h1 class="title margin-bottom-lg" itemprop="headline"></h1>
         <div class="hidden hide d-none" itemprop="author" itemtype="http://schema.org/Organization" itemscope>
             <span itemprop="name">{SCHEMA_ORGNAME}</span>
         </div>
@@ -29,34 +77,7 @@
         </div>
         <!-- END: socialbutton -->
 
-        <!-- BEGIN: imageleft -->
-        <figure class="article left pointer" onclick="modalShowByObj('#imgpreview');">
-            <div style="width:{CONTENT.thumb.width}px;">
-                <img alt="{CONTENT.title}" src="{CONTENT.thumb.src}" class="img-thumbnail" />
-                <!-- BEGIN: alt --><figcaption>{CONTENT.imagealt}</figcaption><!-- END: alt -->
-            </div>
-        </figure>
-        <div id="imgpreview" style="display:none">
-            <p class="text-center"><img alt="{CONTENT.title}" src="{CONTENT.img.src}" srcset="{CONTENT.img.srcset}" class="img-thumbnail"/></p>
-        </div>
-        <!-- END: imageleft -->
-
-        <!-- BEGIN: description -->
-        <div class="hometext margin-bottom-lg" itemprop="description">{CONTENT.description}</div>
-        <!-- END: description -->
-
-        <!-- BEGIN: imagecenter -->
-        <figure class="article center pointer" onclick="modalShowByObj(this);">
-            <p class="text-center"><img alt="{CONTENT.title}" src="{CONTENT.img.src}" srcset="{CONTENT.img.srcset}" width="{CONTENT.img.width}" class="img-thumbnail" /></p>
-            <!-- BEGIN: alt --><figcaption>{CONTENT.imagealt}</figcaption><!-- END: alt -->
-        </figure>
-        <!-- END: imagecenter -->
-
-        <div class="clear"></div>
-
-        <div id="page-bodyhtml" class="bodytext margin-bottom-lg">
-            {CONTENT.bodytext}
-        </div>
+        
     </div>
 </div>
 <!-- BEGIN: adminlink -->

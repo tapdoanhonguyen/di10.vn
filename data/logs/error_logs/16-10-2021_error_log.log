@@ -1,0 +1,53 @@
+[Sat, 16 Oct 2021 21:34:06 +0700] [di10.vn] [14.187.201.66] [Notice(8): Undefined index: symbol] [FILE: /modules/shops/site.functions.php] [LINE: 189] [TRACE:]
+#1  LINE: 388   FILE: /index.php
+#2  LINE: 21    FILE: /modules/home/funcs/main.php
+#3  LINE: 378   FILE: /themes/twtg51/theme.php
+#4  LINE: 178   FILE: /includes/core/user_functions.php
+#5  LINE: 350   FILE: /modules/shops/blocks/global.block_loai_trangchu.php
+#6  LINE: 277   FILE: /modules/shops/blocks/global.block_loai_trangchu.php
+#7  LINE: 94    FILE: /modules/shops/blocks/global.block_loai_trangchu.php
+
+[Sat, 16 Oct 2021 21:34:06 +0700] [di10.vn] [14.187.201.66] [Notice(8): Undefined index: typeprice] [FILE: /modules/news/blocks/global.block_cat_tab.php] [LINE: 129] [TRACE:]
+#1  LINE: 388   FILE: /index.php
+#2  LINE: 21    FILE: /modules/home/funcs/main.php
+#3  LINE: 378   FILE: /themes/twtg51/theme.php
+#4  LINE: 178   FILE: /includes/core/user_functions.php
+#5  LINE: 207   FILE: /modules/news/blocks/global.block_cat_tab.php
+
+[Sat, 16 Oct 2021 21:35:34 +0700] [di10.vn] [14.187.201.66] [Notice(8): Undefined index: captcha_area_comm] [FILE: /modules/comment/comment.php] [LINE: 398] [TRACE:]
+#1  LINE: 388   FILE: /index.php
+#2  LINE: 346   FILE: /modules/shops/funcs/detail.php
+#3  LINE: 307   FILE: /modules/comment/comment.php
+
+[Sat, 16 Oct 2021 21:45:51 +0700] [di10.vn] [115.76.51.13] [Notice(8): Undefined index: symbol] [FILE: /modules/shops/site.functions.php] [LINE: 189] [TRACE:]
+#1  LINE: 388   FILE: /index.php
+#2  LINE: 21    FILE: /modules/home/funcs/main.php
+#3  LINE: 378   FILE: /themes/twtg51/theme.php
+#4  LINE: 178   FILE: /includes/core/user_functions.php
+#5  LINE: 350   FILE: /modules/shops/blocks/global.block_loai_trangchu.php
+#6  LINE: 277   FILE: /modules/shops/blocks/global.block_loai_trangchu.php
+#7  LINE: 94    FILE: /modules/shops/blocks/global.block_loai_trangchu.php
+
+[Sat, 16 Oct 2021 21:45:51 +0700] [di10.vn] [115.76.51.13] [Notice(8): Undefined index: typeprice] [FILE: /modules/news/blocks/global.block_cat_tab.php] [LINE: 129] [TRACE:]
+#1  LINE: 388   FILE: /index.php
+#2  LINE: 21    FILE: /modules/home/funcs/main.php
+#3  LINE: 378   FILE: /themes/twtg51/theme.php
+#4  LINE: 178   FILE: /includes/core/user_functions.php
+#5  LINE: 207   FILE: /modules/news/blocks/global.block_cat_tab.php
+
+[Sat, 16 Oct 2021 21:46:25 +0700] [di10.vn] [113.185.104.124] [Notice(8): Undefined index: symbol] [FILE: /modules/shops/site.functions.php] [LINE: 189] [TRACE:]
+#1  LINE: 388   FILE: /index.php
+#2  LINE: 21    FILE: /modules/home/funcs/main.php
+#3  LINE: 378   FILE: /themes/twtg51/theme.php
+#4  LINE: 178   FILE: /includes/core/user_functions.php
+#5  LINE: 350   FILE: /modules/shops/blocks/global.block_loai_trangchu.php
+#6  LINE: 277   FILE: /modules/shops/blocks/global.block_loai_trangchu.php
+#7  LINE: 94    FILE: /modules/shops/blocks/global.block_loai_trangchu.php
+
+[Sat, 16 Oct 2021 21:46:25 +0700] [di10.vn] [113.185.104.124] [Notice(8): Undefined index: typeprice] [FILE: /modules/news/blocks/global.block_cat_tab.php] [LINE: 129] [TRACE:]
+#1  LINE: 388   FILE: /index.php
+#2  LINE: 21    FILE: /modules/home/funcs/main.php
+#3  LINE: 378   FILE: /themes/twtg51/theme.php
+#4  LINE: 178   FILE: /includes/core/user_functions.php
+#5  LINE: 207   FILE: /modules/news/blocks/global.block_cat_tab.php
+

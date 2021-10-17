@@ -253,6 +253,18 @@ if (! nv_function_exists('nv_relates_product3')) {
 						if ($pro_config['active_order'] == '1' and $pro_config['active_order_non_detail'] == '1') {
 							if ($row['showprice'] == '1') {
 								if ($row['product_number'] > 0) {
+									$listgroupid = BlockGetGroupID($mod_data, $row['id']);
+									$group_requie = 0;
+									if (!empty($listgroupid) and !empty($global_array_group)) {
+										foreach ($global_array_group as $groupinfo) {
+											if ($groupinfo['in_order']) {
+												$group_requie = 1;
+												break;
+											}
+										}
+									}
+									$group_requie = $pro_config['active_order_popup'] ? 1 : $group_requie;
+									$xtpl->assign('GROUP_REQUIE', $group_requie);
 									$xtpl->parse('main.loopcatid.loop.order');
 								} else {
 									$xtpl->parse('main.loopcatid.loop.product_empty');
@@ -291,7 +303,8 @@ if (! nv_function_exists('nv_relates_product3')) {
 							$xtpl->parse('main.loopcatid.loop.wishlist');
 							$xtpl->parse('main.loopcatid1.loop.wishlist');
 						}
-						
+						$row['link']   = $link . $global_array_shops_cat[$row['listcatid']]['alias'] . '/' . $row['alias'] . $global_config['rewrite_exturl'];
+						$xtpl->assign('LOOP', $row);
 						$xtpl->parse('main.loopcatid.loop');
 						$xtpl->parse('main.loopcatid1.loop');
 						++ $i;
@@ -312,8 +325,27 @@ if (! nv_function_exists('nv_relates_product3')) {
         $xtpl->parse('main');
         return $xtpl->text('main');
     }
+	function BlockGetGroupID($mod_data, $pro_id, $group_by_parent = 0)
+	{
+		global $db, $db_config, $module_data, $global_array_group;
+		$data = array();
+		$result = $db->query('SELECT group_id FROM ' . $db_config['prefix'] . '_' . $mod_data . '_group_items where pro_id=' . $pro_id);
+		while ($row = $result->fetch()) {
+			if ($group_by_parent) {
+				$parentid = $global_array_group[$row['group_id']]['parentid'];
+				$data[$parentid][] = $row['group_id'];
+			} else {
+				$data[] = $row['group_id'];
+			}
+		}
+		return $data;
+	}
+	global $db_config;
+	$sql = 'SELECT groupid, parentid, lev, ' . NV_LANG_DATA . '_title AS title, ' . NV_LANG_DATA . '_alias AS alias, viewgroup, numsubgroup, subgroupid, ' . NV_LANG_DATA . '_description AS description, inhome, indetail, in_order, ' . NV_LANG_DATA . '_keywords AS keywords, numpro, image, is_require FROM ' . $db_config['prefix'] . '_' . $block_config['module'] . '_group ORDER BY sort ASC';
+	$global_array_group = $nv_Cache->db($sql, 'groupid', $block_config['module']);
 }
 
 if (defined('NV_SYSTEM')) {
+	
     $content = nv_relates_product3($block_config);
 }

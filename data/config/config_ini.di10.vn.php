@@ -29,8 +29,8 @@ $sys_info['string_handler'] = 'mb';
 $sys_info['support_cache'] = [];
 $sys_info['php_compress_methods'] = ['deflate' => 'gzdeflate', 'gzip' => 'gzencode', 'x-gzip' => 'gzencode', 'compress' => 'gzcompress', 'x-compress' => 'gzcompress'];
 $sys_info['server_headers'] = [];
-$sys_info['http_only'] = true;
-$sys_info['https_only'] = false;
+$sys_info['http_only'] = false;
+$sys_info['https_only'] = true;
 $sys_info['ip6_support'] = true;
 
 ini_set('display_errors', '0');
@@ -41,4 +41,4 @@ ini_set('session.gc_maxlifetime', '3600');
 ini_set('track_errors', '1');
 ini_set('user_agent', 'NV4');
 
-$iniSaveTime = 1633847753;
+$iniSaveTime = 1634382312;

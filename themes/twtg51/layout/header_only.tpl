@@ -20,5 +20,7 @@
         }
         </script>
 		<link href="https://fonts.googleapis.com/css?family=Patrick+Hand|" rel="stylesheet"> 
+ <link rel="stylesheet" href="{NV_STATIC_URL}themes/{TEMPLATE}/js/jquery.mmenu/jquery.mmenu.all.css"> 
+         <script src="{NV_STATIC_URL}themes/{TEMPLATE}/js/swiper.js"></script>
     </head>
     <body class="pc nhomtrang1 ">

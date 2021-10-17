@@ -1,6 +1,7 @@
     <noscript>
         <div class="alert alert-danger">{LANG.nojs}</div>
     </noscript>
+	
 	<div id="khung_chinh">
 		<div>
 			<div class="bocuc  bocuc_310 ">
@@ -46,7 +47,7 @@
 						<div class="bocuc  bocuc_141  ">
 							<div class="loprong">
 								<div class="padding ">
-									<a href="#menu_141"><i class="fas  fa-list" aria-hidden="true"></i><span class="chutren_menumobile">Menu</span></a>
+									<a href="#menu_141"><em class="fa fa-bars pointer mbt-lg"></em><span class="chutren_menumobile">Menu</span></a>
 								</div>
 							</div>
 						</div>
@@ -61,6 +62,11 @@
 					</div>
 				</div>
 			</div>
+			
+			<section class="awe-section-1">
+			[SLIDER]
+			</section>
+			<div class="clearfix"></div>
 			<div class="bocuc  bocuc_142 ">
 				<div class="loprong">
 					<div class="padding ">
